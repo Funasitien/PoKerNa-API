@@ -14,7 +14,7 @@ function getRandomFile(files) {
       })
       .then((files) => {
         const randomFile = getRandomFile(files);
-        return fetch(randomFile);
+        return fetch(`/json/${randomFile}.json`);
       })
       .then((response) => {
         if (!response.ok) {
